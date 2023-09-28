@@ -1,0 +1,34 @@
+
+{% extends "core/base.html" %}
+
+
+{% load static %}
+
+
+{% block title  %}Listar Contactos{% endblock  %}
+
+
+{% block content %}
+
+
+<!-- Inicio del menú principal -->
+<div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Directorio</li>
+        <li><a href="{% url 'inicio' %}">Home</a></li>
+        <li><a href="{% url 'listar' %}">Listar</a></li>
+        <li><a href="{% url 'listar_all' %}">Administrar</a></li>
+
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+    
+        <li><a href="{% url 'add' %}" class="button">Registrar Nuevo</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Fin del menú principal -->
+
+  {% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8: ñ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contactos</title>
+</head>
+<body>
+
+<h1>Lista de Contactos</h1>
+<h1>cantidad: {{ cantidad }}<h1>
+
+<table border="1">
+    <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Tel&eacute;fono</th>
+        <th>Profesi&oacute;n</th>
+        <th>Ciudad</th>
+        
+    </thead>
+    <tbody>
+        {% for contacto in contactos %}
+           <tr>
+              <td> {{ contacto.Nombre }}</td>
+              <td> {{ contacto.Apellidos }}</td>
+              <td> {{ contacto.Telefono }}</td>
+              <td> {{ contacto.Profesion }}</td>
+              <td> {{ contacto.Ciudad }}</td>
+           </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+</body>
+</html>

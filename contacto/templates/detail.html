@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %} Detalle de contacto {% endblock title %}
+
+
+    
+
+{% block content %} 
+
+{% include "includes/header.html" %}
+
+
+
+<div class="grid-x align-center">
+    <h3 class="cell large-8" style="font-size: 25px; text-align: center;">Detalle de contacto: {{ contacto.Nombre  }}</h3> 
+    <h4 class="cell large-8" style="font-size: 25px; text-align: center;">Todos los datos:</h4>
+    <div class="cell large-7">
+        <div class="callout success">
+            <p style="text-align: center;"><img src="{{ contacto.image.url }}" style="width: 100px; "></p>
+            <h5 style="text-align:center;">Nombre:<p>{{ contacto.Nombre}}</p></h5>
+            <h5 style="text-align:center;">Apellidos:<p>{{ contacto.Apellidos}}</p></h5>
+            <h5 style="text-align:center;">Celular:<p>{{ contacto.Telefono}}</p></h5>
+            <h5 style="text-align:center;">Profesión:<p>{{ contacto.Profesion}}</p></h5>
+            <h5 style="text-align:center;">Ciudad:<p>{{ contacto.Ciudad}}</p></h5>
+            <h5 style="text-align:center;">Fecha de creación:<p>{{ contacto.created|date:"SHORT_DATE_FORMAT"}}</p></h5>
+            <h5 style="text-align:center;">Fecha de edición:<p>{{ contacto.update|date:"SHORT_DATE_FORMAT"}}</p></h5>
+          </div>
+          </div>
+    </div>
+  
+{% endblock content %}

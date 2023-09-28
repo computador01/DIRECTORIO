@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %} 
+    Registrar Contacto
+{% endblock title %}
+
+{% block content %} 
+{% include "includes/header.html" %}
+
+<div class="grid-container">
+    <div class="grid-x">
+         <h3 class="cell">
+            Registrar Contacto
+         </h3>
+         <div class="cell">
+            <form class ="grid-x grid-margin-x" method="POST" enctype="multipart/form-data"> {% csrf_token %} 
+                <div class="cell large-6">
+                    <label>Nombre:
+                        {{ form.Nombre }}
+                    </label>
+                  </div>
+                
+                  <div class="cell large-6">
+                    <label>Apellidos:
+                        {{ form.Apellidos }}
+                    </label>
+                  </div>
+
+                  <div class="cell large-6">
+                    <label>Teléfono:
+                        {{ form.Telefono }}
+                    </label>
+                  </div>
+
+                  <div class="cell large-6">
+                    <label>Profesión:
+                        {{ form.Profesion }}
+                    </label>
+                  </div>
+
+                  <div class="cell large-6">
+                    <label>Ciudad:
+                        {{ form.Ciudad }}
+                    </label>
+                  </div>
+
+                  <div class="cell large-6">
+                    <label>Imagen:
+                        {{ form.image }}
+                    </label>
+                  </div>
+
+                  <div class="cell">
+                    <button class="submit success button">Guardar</button>
+                  </div>
+           
+            </form>
+         </div>
+    </div>
+</div>     
+              
+
+{% endblock content %}
+   
